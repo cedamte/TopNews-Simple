@@ -4,17 +4,14 @@ import com.example.topnewssimple.BuildConfig
 import com.example.topnewssimple.data.topheadlines.TopHeadlines
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
 interface TopHeadlinesServices {
     @GET(BuildConfig.TOP_HEADLINES_ENDPOINT)
-    fun getTopHeadlines(@QueryMap(encoded = false) filters: Map<String, String>): Call<TopHeadlines>
+    suspend fun getTopHeadlines(@QueryMap(encoded = false) filters: Map<String, String>): TopHeadlines
 }
 
 val loggingInterceptor = HttpLoggingInterceptor().setLevel(
