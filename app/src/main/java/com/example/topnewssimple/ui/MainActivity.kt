@@ -9,7 +9,6 @@ import com.example.topnewssimple.BuildConfig
 import com.example.topnewssimple.R
 import com.example.topnewssimple.api.TopHeadlinesServices
 import com.example.topnewssimple.api.retrofit
-import com.example.topnewssimple.data.topheadlines.Article.Companion.dummyArticle
 import com.example.topnewssimple.data.topheadlines.TopHeadlines
 import retrofit2.Call
 import retrofit2.Callback
